@@ -4,9 +4,24 @@ files:
   - source: /
     destination: /var/www/html/
 hooks:
+  ApplicationStop:
+    - location: scripts/AfterInstall.sh
+      timeout: 120
+  DownloadBundle:
+    - location: scripts/AfterInstall.sh
+      timeout: 120
   BeforeInstall:
     - location: scripts/BeforeInstall.sh
       timeout: 120
+  Install:
+    - location: scripts/AfterInstall.sh
+      timeout: 120
   AfterInstall:
+    - location: scripts/AfterInstall.sh
+      timeout: 120
+  ApplicationStart:
+    - location: scripts/AfterInstall.sh
+      timeout: 120
+  ValidateService:
     - location: scripts/AfterInstall.sh
       timeout: 120

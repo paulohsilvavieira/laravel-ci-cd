@@ -1,1 +1,1 @@
-cp .env.example .env
+echo 'ola mundo'
