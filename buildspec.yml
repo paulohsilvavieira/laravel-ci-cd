@@ -7,9 +7,10 @@ phases:
   pre_build:
     commands:
       - composer install
+      - chmod +x ./scripts/*
   build:
     commands:
-      - [ -e .env ] && rm .env
+      - ./scripts/remove_env.sh
       - touch .env
       - echo 'DB_DATABASE=$DATABASE_URL' >> .env
       - echo 'DB_USERNAME=$DATABASE_USERNAME' >> .env
