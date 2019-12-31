@@ -9,7 +9,7 @@ phases:
       - composer install
   build:
     commands:
-      - rm .env
+      - [ -e .env ] && rm .env
       - touch .env
       - echo 'DB_DATABASE=$DATABASE_URL' >> .env
       - echo 'DB_USERNAME=$DATABASE_USERNAME' >> .env
