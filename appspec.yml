@@ -1,22 +1,22 @@
 version: 0.0
 os: linux
 files:
-    - source: /
-      destination: /var/www/html/
+  - source: /
+    destination: /var/www/html/
 hooks:
-  BeforeInstall:
-    - location: scripts/BeforeInstall.sh
-      timeout: 120
-  AfterInstall:
-    - location: scripts/AfterInstall.sh
-      timeout: 120
   ApplicationStop:
     - location: scripts/AfterInstall.sh
       timeout: 120
   DownloadBundle:
     - location: scripts/AfterInstall.sh
       timeout: 120
+  BeforeInstall:
+    - location: scripts/BeforeInstall.sh
+      timeout: 120
   Install:
+    - location: scripts/AfterInstall.sh
+      timeout: 120
+  AfterInstall:
     - location: scripts/AfterInstall.sh
       timeout: 120
   ApplicationStart:
