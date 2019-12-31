@@ -8,4 +8,4 @@ phases:
       - composer install
   build:
     commands:
-      - echo $DATABASE_URL
+      - echo 'DB_DATABASE=$DATABASE_URL >> .env'
