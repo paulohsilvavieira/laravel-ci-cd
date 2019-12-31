@@ -15,5 +15,3 @@ phases:
       - echo 'DB_USERNAME=$DATABASE_USERNAME' >> .env
       - echo 'DB_PASSWORD=$DATABASE_PASSWORD' >> .env
       - php artisan key:generate
-      - php artisan config:cache
-      - php artisan route:cache
