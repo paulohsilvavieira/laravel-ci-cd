@@ -1,1 +1,1 @@
-echo 'ola mundo'
+echo $DATABASE_PASSWORD
