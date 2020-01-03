@@ -5,7 +5,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<img src="https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiM0lrMTVlMXVLZ1ZFYzl1dHFpT2J6dXE2Y3ltdHB6blJaZVoyODNZckp4TTQ4a0kyaGQzcjU5aXNWUUtlMGRmZERtTWxHZDJ0NklrRXE3dWlWeWt3bFE0PSIsIml2UGFyYW1ldGVyU3BlYyI6IkhWaEF4M2p4WUExK1U2MTEiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master"/>
+
 </p>
+
+
 
 ## About Laravel
 
