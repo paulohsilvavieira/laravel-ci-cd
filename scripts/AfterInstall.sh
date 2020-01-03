@@ -1,18 +1,6 @@
-sudo chown -R www-data:www-data /home/ubuntu/app
-
-sudo find /home/ubuntu/app/ -type d -exec chmod 755 {} \;
-sudo find /home/ubuntu/app/ -type f -exec chmod 644 {} \;
-
-sudo chgrp -R www-data /home/ubuntu/app/storage /home/ubuntu/app/bootstrap/cache
-sudo chmod -R ug+rwx /home/ubuntu/app/storage /home/ubuntu/app/bootstrap/cache
-
-sudo usermod -a -G www-data ubuntu
-
-sudo chown -R ubuntu:www-data /home/ubuntu/app
+sudo chmod -R 777 www-data:www-data /home/ubuntu/app
 
 
-sudo find /home/ubuntu/app/ -type f -exec chmod 664 {} \;
-sudo find /home/ubuntu/app/ -type d -exec chmod 775 {} \;
 
 cd /home/ubuntu/app
 
@@ -20,6 +8,8 @@ cd /home/ubuntu/app
 rm /home/ubuntu/.env
 
 composer install
+
+if [ ! -f '/home/ubuntu/.env' ]; then
 
 echo 'APP_NAME=Laravel' >>/home/ubuntu/.env
 echo 'APP_ENV=local' >>/home/ubuntu/.env
@@ -77,8 +67,9 @@ echo "DB_DATABASE=$DATABASE_NAME" >>/home/ubuntu/.env
 echo "DB_USERNAME=$DATABASE_USERNAME" >>/home/ubuntu/.env
 echo "DB_PASSWORD=$DATABASE_PASSWORD" >>/home/ubuntu/.env
 
-mv /home/ubuntu/.env .env
+cp /home/ubuntu/.env /home/ubuntu/app/.env
 
+fi
 composer dump-autoload
 
 php artisan cache:clear
@@ -88,6 +79,16 @@ php artisan key:generate
 php artisan migrate
 
 
+sudo find /home/ubuntu/app/ -type d -exec chmod 755 {} \;
+sudo find /home/ubuntu/app/ -type f -exec chmod 644 {} \;
+
+sudo chgrp -R www-data /home/ubuntu/app/storage /home/ubuntu/app/bootstrap/cache
+sudo chmod -R ug+rwx /home/ubuntu/app/storage /home/ubuntu/app/bootstrap/cache
+
+sudo usermod -a -G www-data ubuntu
+
+sudo chown -R ubuntu:www-data /home/ubuntu/app
 
 
-
+sudo find /home/ubuntu/app/ -type f -exec chmod 664 {} \;
+sudo find /home/ubuntu/app/ -type d -exec chmod 775 {} \;
