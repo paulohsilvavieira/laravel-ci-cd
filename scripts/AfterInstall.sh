@@ -1,5 +1,10 @@
+
+sudo su ubuntu
+
 rm /home/ubuntu/.env
+
 cd /home/ubuntu
+
 
 if [ ! -f .env ]; then
 
