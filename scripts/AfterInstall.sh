@@ -1,3 +1,6 @@
 cd /home/ubuntu/app
 
-pwd
+cp /home/ubuntu/.env /home/ubuntu/app
+
+composer install
+
