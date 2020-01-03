@@ -1,3 +1,4 @@
+cd /home/ubuntu
 
 sudo cp .env /home/ubuntu/app/
 
