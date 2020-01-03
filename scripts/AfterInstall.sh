@@ -5,11 +5,16 @@ cd /home/ubuntu/app
 cp /home/ubuntu/.env /home/ubuntu/app
 
 sudo chgrp -R www-data storage bootstrap/cache
+
 sudo chmod -R ug+rwx storage bootstrap/cache
 
 composer install
 
+composer dump-autoload
+
+php artisan cache:clear
+
 php artisan key:generate
 
-php artisan migrate
+php artisan migrate --force
 
