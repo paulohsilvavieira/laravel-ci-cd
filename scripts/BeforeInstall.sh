@@ -1,1 +1,1 @@
-rm -rf /var/www/html/*
+rm -rf /home/ubuntu/app/*
