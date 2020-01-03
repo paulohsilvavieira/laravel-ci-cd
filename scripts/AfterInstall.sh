@@ -1,6 +1,8 @@
 
 sudo su ubuntu
 
+echo $USER
+
 rm /home/ubuntu/.env
 
 cd /home/ubuntu
