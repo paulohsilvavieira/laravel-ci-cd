@@ -1,8 +1,8 @@
-cd /home/ubuntu
 
-sudo cp .env /home/ubuntu/app/
+sudo chmod -R 777 /home/ubuntu/app
 
-cd /home/ubuntu/app
+cp /home/ubuntu/.env /home/ubuntu/app/
+
 
 composer install
 
