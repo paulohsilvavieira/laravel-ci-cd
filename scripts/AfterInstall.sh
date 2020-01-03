@@ -63,8 +63,9 @@ if [ ! -f .env ]; then
     echo "DB_DATABASE=$DATABASE_NAME" >> .env
     echo "DB_USERNAME=$DATABASE_USERNAME" >> .env
     echo "DB_PASSWORD=$DATABASE_PASSWORD" >> .env
+    cat .env
 
-    cp .env /home/ubuntu/app/
+    sudo cp .env /home/ubuntu/app/
 fi
 
 sudo chmod -R 777 /home/ubuntu/app
