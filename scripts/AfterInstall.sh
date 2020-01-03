@@ -31,12 +31,7 @@ echo 'APP_URL=http://localhost' >>.env
 echo ""  >>.env
 echo 'LOG_CHANNEL=stack' >>.env
 
-echo 'DB_CONNECTION=mysql' >>.env
-echo "DB_HOST=$DATABASE_URL" >>.env
-echo 'DB_PORT=3306' >>.env
-echo "DB_DATABASE=$DATABASE_NAME" >>.env
-echo "DB_USERNAME=$DATABASE_USERNAME" >>.env
-echo "DB_PASSWORD=$DATABASE_PASSWORD" >>.env
+
 
 echo ""  >>.env
 
@@ -77,6 +72,15 @@ echo ""  >>.env
 
 echo 'MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"' >>.env
 echo 'MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"' >>.env
+
+echo ""  >>.env
+
+echo 'DB_CONNECTION=mysql' >>.env
+echo "DB_HOST=$DATABASE_URL" >>.env
+echo 'DB_PORT=3306' >>.env
+echo "DB_DATABASE=$DATABASE_NAME" >>.env
+echo "DB_USERNAME=$DATABASE_USERNAME" >>.env
+echo "DB_PASSWORD=$DATABASE_PASSWORD" >>.env
 
 composer dump-autoload
 
