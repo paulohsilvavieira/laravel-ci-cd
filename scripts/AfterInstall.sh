@@ -12,8 +12,9 @@ echo DB_PORT=3306 >>.env
 echo DB_CONNECTION=mysql >>.env
 
 composer dump-autoload
-
 php artisan key:generate
+
+php artisan migrate
 
 
 
