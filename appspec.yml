@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
+    destination: /home/ubuntu/app
 hooks:
   BeforeInstall:
     - location: scripts/BeforeInstall.sh
       timeout: 120
-      runas: root
+      runas: ubuntu
   AfterInstall:
     - location: scripts/AfterInstall.sh
       timeout: 120
-      runas: root
+      runas: ubuntu
