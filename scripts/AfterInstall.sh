@@ -1,11 +1,11 @@
-sudo chown -R www-data:www-data /home/ubuntu/app
+sudo chown -R $USER:$USER /home/ubuntu/app
 
 cd /home/ubuntu/app
 
 composer install
 
-sudo chgrp -R www-data storage bootstrap/cache
-sudo chmod -R ug+rwx storage bootstrap/cache
+sudo chgrp -R $USER storage bootstrap/cache
+sudo chmod -R $USER storage bootstrap/cache
 
 
 echo DB_HOST=$DATABASE_URL >>.env
