@@ -1,15 +1,10 @@
 
 sudo su ubuntu
 
-echo $USER
-
 rm /home/ubuntu/.env
 
 cd /home/ubuntu
 
-sudo su ubuntu
-
-rm /home/ubuntu/.env
 
 echo $DATABASE_PASSWORD
 echo 'APP_NAME=Laravel' >> .env
@@ -100,4 +95,5 @@ sudo usermod -a -G www-data ubuntu
 sudo chown -R ubuntu:www-data /home/ubuntu/app
 
 sudo find /home/ubuntu/app/ -type f -exec chmod 664 {} \;
+
 sudo find /home/ubuntu/app/ -type d -exec chmod 775 {} \;
