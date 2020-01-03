@@ -1,4 +1,4 @@
-sudo chmod -R ubuntu:ubuntu /home/ubuntu/app
+sudo chown -R ubuntu:ubuntu /home/ubuntu/app
 
 cd /home/ubuntu/app
 
