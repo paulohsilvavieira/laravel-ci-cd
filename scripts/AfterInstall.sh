@@ -1,12 +1,9 @@
 
-sudo chmod -R 777 /home/ubuntu/app
-
-cp /home/ubuntu/.env /home/ubuntu/app/
 
 
-composer install
+cp /home/ubuntu/.env /home/ubuntu/app
 
-composer dump-autoload
+ls -la
 
 php artisan cache:clear
 
