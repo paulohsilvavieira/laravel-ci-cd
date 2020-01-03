@@ -1,5 +1,6 @@
 
 
+sudo chmod -R 777 /home/ubuntu/app
 
 cp /home/ubuntu/.env /home/ubuntu/app
 
