@@ -1,7 +1,7 @@
 sudo chown -R ubuntu:ubuntu /home/ubuntu/app
 
 cd /home/ubuntu/app
-
+rm .env
 composer install
 
 sudo chgrp -R ubuntu storage bootstrap/cache
