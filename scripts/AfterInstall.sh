@@ -80,8 +80,7 @@ php artisan cache:clear
 
 php artisan key:generate
 
-php artisan migrate
-
+php artisan migrate --force
 
 sudo find /home/ubuntu/app/ -type d -exec chmod 755 {} \;
 
