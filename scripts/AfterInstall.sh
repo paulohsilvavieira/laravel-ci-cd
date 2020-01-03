@@ -58,7 +58,7 @@ if [ ! -f "/home/ubuntu/.env" ]; then
     echo "DB_USERNAME=$DATABASE_USERNAME" >> /home/ubuntu/.env
     echo "DB_PASSWORD=$DATABASE_PASSWORD" >> /home/ubuntu/.env
 
-    cp /home/ubuntu/.env /home/ubuntu/app/.env
+    cp /home/ubuntu/.env /home/ubuntu/app/
 fi
 
 sudo chmod -R 777 /home/ubuntu/app
