@@ -1,11 +1,11 @@
-sudo chown -R $USER:$USER /home/ubuntu/app
+sudo chown -R ubuntu:ubuntu /home/ubuntu/app
 
 cd /home/ubuntu/app
 
 composer install
 
-sudo chgrp -R $USER storage bootstrap/cache
-sudo chmod -R $USER storage bootstrap/cache
+sudo chgrp -R ubuntu storage bootstrap/cache
+sudo chmod -R ubuntu storage bootstrap/cache
 
 
 echo "DB_HOST=$DATABASE_URL" >>.env
